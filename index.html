@@ -21,6 +21,7 @@
     <script async custom-element="amp-audio" src="https://cdn.ampproject.org/v0/amp-audio-0.1.js"></script>
     <script async custom-element="amp-instagram" src="https://cdn.ampproject.org/v0/amp-instagram-0.1.js"></script>
     <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
     <style amp-custom>
   :root{
     --bg-main: #684f67;
@@ -61,6 +62,21 @@
     width: 50%;
     min-width: 352px;
   }
+  #sidebar{
+    background-color: rgba(0,0,0,0.9);
+    width: 139px;
+  }
+  #sidebar div{
+    text-align: center;
+  }
+  #sidebar button{
+    margin: 9px;
+    color: var(--bg-hov);
+    background-color: var(--bg-menu);
+  }
+  #sidebar button:hover{
+    color: var(--bg-main);
+  }
   amp-youtube{
     margin: 5px 9px;
   }
@@ -83,8 +99,29 @@
   h6:hover, amp-list p:hover{
     color: var(--bg-hov);
   }
+  #btn_s{
+    background: var(--bg-menu);
+    height: 12px;
+  }
+  #ifr_cont{
+    position: absolute;
+  }
   #ifr_cont amp-iframe{
     display: block;
+  }  
+  .l_up{
+    left: 0;
+  }
+  .r_up{
+    right: 0;
+  }
+  .l_down{
+    left: 0;
+    top: 500px;
+  }
+  .r_down{
+    right: 0;
+    top: 500px;
   }
 </style>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
@@ -136,7 +173,31 @@
       </div>
   </section>
 </amp-accordion>
-<amp-img height="59" width="52" src="./IMG_1278.jpg" style="opacity:0.6"></amp-img>
+<amp-sidebar id="sidebar" layout="nodisplay" side="right">
+  <br>
+  <!-- <amp-accordion class="main" disable-session-states>
+    <section class="">
+      <h6 class="amp_a">_</h6> -->
+      <div id="btn_cont">
+        <div>
+          <button on="tap:AMP.setState({my_class: 'l_up'})">btn_1</button>
+          <button on="tap:AMP.setState({my_class: 'r_up'})">btn_2</button>
+        </div>
+        <div>
+          <button on="tap:AMP.setState({my_class: 'l_down'})">btn_3</button>
+          <button on="tap:AMP.setState({my_class: 'r_down'})">btn_4</button>
+        </div>
+      </div>  
+    <!-- </section>
+  </amp-accordion> -->
+</amp-sidebar>
 
+<amp-img height="59" width="52" src="./img/IMG_1278.jpg" style="opacity:0.6"></amp-img>
+<div id="btn_s" on='tap:sidebar'>btn_s</div>
+<div id="ifr_cont" class="l_up" [class]="my_class">
+  <amp-iframe src="https://nuitmod.github.io/mod_pwa/amp" width="619" height="1099" scrolling="no" frameborder="0" sandbox="allow-scripts allow-same-origin">
+    <amp-img placeholder height="1" width="2" src="./img/IMG_1278.jpg" style="opacity:0.1"></amp-img>
+  </amp-iframe>
+</div>
  </body>
 </html>
