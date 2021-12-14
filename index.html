@@ -176,7 +176,11 @@ color: var(--bg-hov);
         <a href="https://vii-mod.vercel.app/">vii-mod</a>
         <button on="tap:main_img.toggleVisibility">hide img</button>
         <button on="tap:ifr_cont.toggleVisibility">hide ifr</button>
-      </div>
+        <button on="tap:AMP.setState({my_class: 'l_up'})">btn_1</button>
+        <button on="tap:AMP.setState({my_class: 'r_up'})">btn_2</button>
+        <button on="tap:AMP.setState({my_class: 'l_down'})">btn_3</button>
+        <button on="tap:AMP.setState({my_class: 'r_down'})">btn_4</button>
+       </div>
   </section>
 </amp-accordion>
 <amp-sidebar id="sidebar" layout="nodisplay" side="right">
