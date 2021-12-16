@@ -179,15 +179,15 @@
         <button on="tap:AMP.setState({my_class: 'r_up'})">btn_2</button>
         <button on="tap:AMP.setState({my_class: 'l_down'})">btn_3</button>
         <button on="tap:AMP.setState({my_class: 'r_down'})">btn_4</button>
-        <div><button id="btn_s" on='tap:sidebar'>btn_s</button></div>
+       <!-- <div><button id="btn_s" on='tap:sidebar'>btn_s</button></div>-->
        </div>
   </section>
 </amp-accordion>
 <amp-sidebar id="sidebar" layout="nodisplay" side="right">
   <br>
-  <!-- <amp-accordion class="main" disable-session-states>
+  <amp-accordion class="main" disable-session-states>
     <section class="">
-      <h6 class="amp_a">_</h6> -->
+      <h6 class="amp_a">_</h6>
       <div id="btn_cont">
         <div>
           <button on="tap:AMP.setState({my_class: 'l_up'})">btn_1</button>
@@ -198,11 +198,11 @@
           <button on="tap:AMP.setState({my_class: 'r_down'})">btn_4</button>
         </div>
       </div>  
-    <!-- </section>
-  </amp-accordion> -->
+    </section>
+  </amp-accordion>
 </amp-sidebar>
 
-<amp-img id="main_img" height="59" width="52" src="./img/IMG_1278.jpg" style="opacity:0.4"></amp-img>
+<amp-img id="main_img" height="59" width="52" src="./img/IMG_1278.jpg" on='tap:sidebar' style="opacity:0.4"></amp-img>
 <!-- <button id="btn_s" on='tap:sidebar'>btn_s</button> -->
 <div id="ifr_cont" class="l_up" [class]="my_class">
   <!-- <amp-iframe src="https://nuitmod.github.io/mod_pwa/amp" width="519" height="1099" scrolling="no" frameborder="0" sandbox="allow-scripts allow-same-origin">
