@@ -59,7 +59,7 @@
     width: auto;
   }
   button{
-    margin: 0 5px 1px 2px;
+    margin: 0 5px 2px 5px;
     color: var(--bg-hov);
     background-color: var(--bg-menu);
   }
@@ -72,7 +72,7 @@
   }
   #sidebar{
     background-color: rgba(0,0,0,0.9);
-    width: 159px;
+    width: 209px;
   }
   #sidebar div{
     text-align: center;
@@ -104,7 +104,7 @@
   }
   #btn_s{
     background: var(--bg-menu);
-    height: 12px;
+    height: 9px;
   }
   #ifr_cont{
     position: absolute;
@@ -165,7 +165,7 @@
 <body>
 <amp-accordion class="main" disable-session-states>
   <section>
-    <h6 class="amp_a">vvi w</h6>
+    <h6 class="amp_a">vv wi</h6>
       <div>
         <a href="https://nuitmod.github.io/ini_pwa/amp/">ini_pwa</a>
         <a href="https://nuitmod.github.io/npx_io/">npx_io</a>
@@ -179,6 +179,7 @@
         <button on="tap:AMP.setState({my_class: 'r_up'})">btn_2</button>
         <button on="tap:AMP.setState({my_class: 'l_down'})">btn_3</button>
         <button on="tap:AMP.setState({my_class: 'r_down'})">btn_4</button>
+        <div><button id="btn_s" on='tap:sidebar'>btn_s</button></div>
        </div>
   </section>
 </amp-accordion>
@@ -201,8 +202,8 @@
   </amp-accordion> -->
 </amp-sidebar>
 
-<amp-img id="main_img" height="59" width="52" src="./img/IMG_1278.jpg" style="opacity:0.5"></amp-img>
-<div id="btn_s" on='tap:sidebar'>btn_s</div>
+<amp-img id="main_img" height="59" width="52" src="./img/IMG_1278.jpg" style="opacity:0.4"></amp-img>
+<!-- <button id="btn_s" on='tap:sidebar'>btn_s</button> -->
 <div id="ifr_cont" class="l_up" [class]="my_class">
   <!-- <amp-iframe src="https://nuitmod.github.io/mod_pwa/amp" width="519" height="1099" scrolling="no" frameborder="0" sandbox="allow-scripts allow-same-origin">
     <amp-img placeholder height="1" width="2" src="./img/IMG_1278.jpg" style="opacity:0.1"></amp-img>
