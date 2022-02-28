@@ -1,10 +1,10 @@
 {
-    "name": "vvi w",
-    "short_name": "vvi",
+    "name": "vi_mod",
+    "short_name": "vi",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#000",
-    "description": "A vvi pwa app.",
+    "description": "vi.mod.media app.",
     "icons": [
         {
             "src": "../assets/logo-192.png",
