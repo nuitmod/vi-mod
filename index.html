@@ -25,7 +25,7 @@
     <script async custom-element="amp-mega-menu" src="https://cdn.ampproject.org/v0/amp-mega-menu-0.1.js"></script>
     <style amp-custom>
   :root{
-    --bg-main: #684f67;
+    --bg-main: #b592b4;
     --bg-menu: black;
     --bg-hov: ghostwhite;
   }
@@ -73,13 +73,17 @@
   }
   #sidebar{
     background-color: rgba(0,0,0,0.9);
-    width: 209px;
+    width: 239px;
   }
   #sidebar div{
     text-align: center;
   }
   #sidebar button{
     margin: 9px;
+  }
+  #sidebar a{
+    margin: 5px;
+    display: block;
   }
   amp-youtube{
     margin: 5px 9px;
@@ -94,7 +98,10 @@
   }
   amp-img{
     margin: 2px 1px 2px 0;
-    opacity: 0.8;
+    opacity: 0.1;
+  }
+  amp-img:hover{
+    opacity: 0.2;
   }
   .inner amp-iframe{
     margin: 9px 1px;
@@ -129,6 +136,13 @@
   }
   amp-mega-menu nav{
     /* color: var(--bg-hov); */
+    background-color: var(--bg-menu);
+  }
+  amp-mega-menu a{
+    margin: 2px;
+  }
+  amp-mega-menu .menu-item[open] > div{
+    margin-top: 10px;
     background-color: var(--bg-menu);
   }
 </style>
@@ -172,22 +186,22 @@
   <section>
     <h6 class="amp_a">vi-mod</h6>
       <div>
-       <amp-mega-menu height="28" layout="fixed-height">
+       <amp-mega-menu height="38" layout="fixed-height">
         <nav>
           <ul>
-            <li>
+            <li class="menu-item">
               <a role="button">vi 1</a>
               <div role="dialog">
-                <!-- <a id="btn_s" on='tap:sidebar'>btn_s</a> -->
                 <a href="https://nuitmod.github.io/ini_pwa/amp/">ini_pwa</a>
                 <a href="https://nuitmod.github.io/io_proj/amp/">io_proj</a>
                 <a href="https://nuitmod.github.io/mod_i/amp/">mod_i</a>
                 <a href="https://w-mod.vercel.app/">w-mod</a>
                 <a on="tap:main_img.toggleVisibility">hide img</a>
                 <a on="tap:ifr_cont.toggleVisibility">hide ifr</a>
+                <a id="btn_s" on='tap:sidebar'>btn_s</a>
               </div>
             </li>
-            <li>
+            <li class="menu-item">
               <a role="button">vi 2</a>
               <div role="dialog">
                 <!-- <button on="tap:main_img.toggleVisibility">hide img</button>
@@ -204,26 +218,26 @@
       </div>
   </section>
 </amp-accordion>
-<!-- <amp-sidebar id="sidebar" layout="nodisplay" side="right">
+<amp-sidebar id="sidebar" layout="nodisplay" side="right">
   <br>
   <amp-accordion class="main" disable-session-states>
     <section class="">
-      <h6 class="amp_a">_</h6>
-      <div id="btn_cont">
-        <div>
-          <button on="tap:AMP.setState({my_class: 'l_up'})">btn_1</button>
-          <button on="tap:AMP.setState({my_class: 'r_up'})">btn_2</button>
-        </div>
-        <div>
-          <button on="tap:AMP.setState({my_class: 'l_down'})">btn_3</button>
-          <button on="tap:AMP.setState({my_class: 'r_down'})">btn_4</button>
-        </div>
+      <h6 class="amp_a">.</h6>
+      <div>
+        <ul>
+          <li>
+            <a href="https://nuitmod.github.io/ini_pwa/amp/">ini_pwa</a>
+            <a href="https://nuitmod.github.io/io_proj/amp/">io_proj</a>
+            <a href="https://nuitmod.github.io/mod_i/amp/">mod_i</a>
+            <a href="https://w-mod.vercel.app/">w-mod</a>
+          </li>
+        </ul>
       </div>  
     </section>
   </amp-accordion>
-</amp-sidebar> -->
+</amp-sidebar>
 
-<amp-img id="main_img" height="59" width="52" src="./img/IMG_1278.jpg" style="opacity:0.1"></amp-img>
+<amp-img id="main_img" height="59" width="52" src="./img/IMG_1278.jpg" ></amp-img>
 <!-- <button id="btn_s" on='tap:sidebar'>btn_s</button> -->
 <br>
 <div id="ifr_cont" class="l_up" [class]="my_class">
