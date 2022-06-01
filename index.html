@@ -96,11 +96,11 @@
     background-color: black;
     z-index: 12;
   }
-  amp-img{
+  .content amp-img{
     margin: 2px 1px 2px 0;
     opacity: 0.1;
   }
-  amp-img:hover{
+  .content amp-img:hover{
     opacity: 0.2;
   }
   .inner amp-iframe{
@@ -149,6 +149,21 @@
   }
   h5{ 
     color: var(--bg-hov);
+  }
+  .footer{
+    height: 20px;
+    position: absolute;
+    bottom: 0;
+    color: var(--bg-hov);
+  }
+  .footer ul li {
+    padding: 15px;
+  }
+  .footer ul li a{
+    text-align: center;
+  }
+  .footer ul li label{
+   padding: 10px;
   }
 </style>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
@@ -241,9 +256,11 @@
     </section>
   </amp-accordion>
 </amp-sidebar>
+<div class="content">
 <h5>vi-mod</h5>
-<!--<amp-img id="main_img" height="59" width="52" src="./img/IMG_1278.jpg" ></amp-img>-->
+<amp-img id="main_img" height="59" width="52" src="./img/IMG_1278.jpg" hidden></amp-img>
 <!-- <button id="btn_s" on='tap:sidebar'>btn_s</button> -->
+</div>
 <br>
 <div id="ifr_cont" class="l_up" [class]="my_class">
   <!-- <amp-iframe src="https://nuitmod.github.io/mod_pwa/amp" width="519" height="1099" scrolling="no" frameborder="0" sandbox="allow-scripts allow-same-origin">
@@ -255,6 +272,13 @@
   <amp-iframe src="https://v-mod.vercel.app/ifr/index.html" width="559" height="900" scrolling="no" sandbox="allow-scripts allow-same-origin" >
     <amp-img placeholder height="1" width="1" src="./img/mod-1.jpg" style="opacity:0.1"></amp-img>
   </amp-iframe>
+  <div class="footer">
+    <ul>
+      <li>
+        <label>youtube:</label> <a href="https://www.youtube.com/channel/UCND1N-vkj-_i8gXI2a06rUQ"><amp-img src="./img/y_dark_i.png" height="29px" width="39px"></amp-img></a>
+      </li>  
+    </ul>
+  </div>
 </div>
- </body>
+</body>
 </html>
