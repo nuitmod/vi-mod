@@ -22,7 +22,7 @@
     <script async custom-element="amp-audio" src="https://cdn.ampproject.org/v0/amp-audio-0.1.js"></script>
     <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
     <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
-    <script async custom-element="amp-mega-menu" src="https://cdn.ampproject.org/v0/amp-mega-menu-0.1.js"></script>
+   <!-- <script async custom-element="amp-mega-menu" src="https://cdn.ampproject.org/v0/amp-mega-menu-0.1.js"></script>-->
     <style amp-custom>
   :root{
     --bg-main: #b592b4;
@@ -162,6 +162,7 @@
   }
   .footer ul li {
     padding: 15px;
+    list-style: none;
   }
   .footer ul li a{
     text-align: center;
@@ -213,7 +214,7 @@
   <section>
     <h6 class="amp_a">vi-mod</h6>
       <div>
-       <amp-mega-menu height="38" layout="fixed-height">
+    <!--   <amp-mega-menu height="38" layout="fixed-height">
         <nav>
           <ul>
             <li class="menu-item">
@@ -241,7 +242,7 @@
             </li>
           </ul>
         </nav>
-      </amp-mega-menu>
+      </amp-mega-menu>-->
       </div>
   </section>
 </amp-accordion>
@@ -269,7 +270,7 @@
 <!-- <button id="btn_s" on='tap:sidebar'>btn_s</button> -->
 </div>
 <br>
-<!--<div id="ifr_cont" class="l_up" [class]="my_class">
+<div id="ifr_cont" class="l_up" [class]="my_class">
   <amp-iframe src="https://vv-mod.vercel.app" width="559" height="1999" scrolling="no" frameborder="0" sandbox="allow-scripts allow-same-origin">
     <amp-img placeholder height="1" width="2" src="./img/IMG_1278.jpg" style="opacity:0.1"></amp-img>
   </amp-iframe>
@@ -283,7 +284,7 @@
       </li>  
     </ul>
   </div>
-</div>-->
+</div>
 <amp-analytics type="gtag" data-credentials="include">
     <script type="application/json">
     {
