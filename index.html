@@ -22,7 +22,7 @@
     <script async custom-element="amp-audio" src="https://cdn.ampproject.org/v0/amp-audio-0.1.js"></script>
     <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
     <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
-   <!-- <script async custom-element="amp-mega-menu" src="https://cdn.ampproject.org/v0/amp-mega-menu-0.1.js"></script>-->
+    <script async custom-element="amp-mega-menu" src="https://cdn.ampproject.org/v0/amp-mega-menu-0.1.js"></script>
     <style amp-custom>
   :root{
     --bg-main: #b592b4;
@@ -55,7 +55,7 @@
   }
   amp-accordion .amp_a{
     background: var(--bg-menu);
-    width: 100%;
+    width: auto;
   }
   button{
     margin: 0 5px 2px 5px;
@@ -64,10 +64,6 @@
   }
   button:hover{
     color: var(--bg-main);
-  }
-  .inner{
-    width: 50%;
-    min-width: 352px;
   }
   #sidebar{
     background-color: rgba(0,0,0,0.9);
@@ -214,7 +210,7 @@
   <section>
     <h6 class="amp_a">vi-mod</h6>
       <div>
-    <!--   <amp-mega-menu height="38" layout="fixed-height">
+      <amp-mega-menu height="38" layout="fixed-height">
         <nav>
           <ul>
             <li class="menu-item">
@@ -232,8 +228,6 @@
             <li class="menu-item">
               <a role="button">vi 2</a>
               <div role="dialog">
-                <!-- <button on="tap:main_img.toggleVisibility">hide img</button>
-                <button on="tap:ifr_cont.toggleVisibility">hide ifr</button> -->
                 <a on="tap:AMP.setState({my_class: 'l_up'})">btn_1</a>
                 <a on="tap:AMP.setState({my_class: 'l_down'})">btn_2</a>
                 <a on="tap:AMP.setState({my_class: 'r_up'})">btn_3</a>
@@ -242,7 +236,7 @@
             </li>
           </ul>
         </nav>
-      </amp-mega-menu>-->
+      </amp-mega-menu>
       </div>
   </section>
 </amp-accordion>
