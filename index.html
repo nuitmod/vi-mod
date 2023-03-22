@@ -122,11 +122,13 @@
   #ifr_cont{
     position: absolute;
     opacity: 1;
-    width: 20%;
+    /* width: 20%;
+    min-width: 20%; */
   }
   #ifr_cont amp-iframe{
     display: block;
     opacity: 1;
+    min-width: 20%;
   }  
   .l_up{
     left: 0;
@@ -276,7 +278,7 @@
 </div>
 <br>
 <div id="ifr_cont" class="l_up" [class]="my_class">
-  <amp-iframe src="https://vv-mod.vercel.app/vi/" width="579" height="2599" scrolling="no" frameborder="0" sandbox="allow-scripts allow-popups allow-same-origin">
+  <amp-iframe src="https://vv-mod.vercel.app/vi/" style="min-width: 20%;" width="579" height="2599" scrolling="no" frameborder="0" sandbox="allow-scripts allow-popups allow-same-origin">
     <amp-img placeholder height="1" width="2" src="./img/IMG_1278.jpg" style="opacity:0.1"></amp-img>
   </amp-iframe>
   <amp-iframe src="https://v-mod.vercel.app/ifr/index.html" width="559" height="900" scrolling="no" sandbox="allow-scripts allow-popups allow-same-origin">
@@ -290,8 +292,8 @@
     </ul>
   </div>
 </div>
-<div id="r-area" style="position: absolute; right: 0; width: 80%;" >
-  <amp-iframe src="https://vv-mod.vercel.app/"   width="1199" height="2599" scrolling="no" frameborder="0" sandbox="allow-scripts allow-popups allow-same-origin">
+<div id="r-area" style="position: absolute; right: 0; width: auto;">
+  <amp-iframe src="https://vv-mod.vercel.app/"  width="1199" height="2599" scrolling="no" frameborder="0" sandbox="allow-scripts allow-popups allow-same-origin">
     <amp-img placeholder height="1" width="2" src="./img/IMG_1278.jpg" style="opacity:0.1"></amp-img>
   </amp-iframe>
 </div>
