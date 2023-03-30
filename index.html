@@ -12,7 +12,7 @@
     <link rel="preload" as="script" href="https://cdn.ampproject.org/v0/amp-dynamic-css-classes-0.1.js">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <script async custom-element="amp-experiment" src="https://cdn.ampproject.org/v0/amp-experiment-0.1.js"></script>
-    <script async custom-element="amp-dynamic-css-classes" src="https://cdn.ampproject.org/v0/amp-dynamic-css-classes-0.1.js"></script>
+    <!-- <script async custom-element="amp-dynamic-css-classes" src="https://cdn.ampproject.org/v0/amp-dynamic-css-classes-0.1.js"></script> -->
     <!-- Import other AMP Extensions here -->
     <script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
     <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
@@ -40,17 +40,22 @@
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     background: var(--bg-menu);
     color: var(--bg-main);
-    font-size: 11px;
+    font-size: 9px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     /* background-image: url(./img/v_2.GIF);
-    background-size: 150px; */
+    background-size: 360px; */
   }
   amp-accordion {
     background: var(--bg-menu);
   }
   amp-accordion a{
+    /* -webkit-text-size-adjust: 100%; */
     background: var(--bg-menu);
     color: var(--bg-main);
-    font-size: 12px;
+    font-size: 8px;
     text-decoration: none;
     padding: 5px 10px;
   }
@@ -176,7 +181,7 @@
     opacity: 0.5;
   }
   /* h5{
-    text-align: center;
+    font-size: 8px;
   } */
   @media screen and (max-width: 900px) {
     #r-area{
@@ -276,7 +281,7 @@
   <h5>vi-mod</h5>
   <amp-img id="main_img" height="59" width="52" src="./img/IMG_1278.jpg" hidden></amp-img>
   <!-- <button id="btn_s" on='tap:sidebar'>btn_s</button> -->
-</div>
+<!-- </div> -->
 <br>
 <div id="ifr_cont" class="l_up" [class]="my_class">
   <amp-iframe src="https://vv-mod.vercel.app/vi/" width="579" height="2599" scrolling="no" frameborder="0" sandbox="allow-scripts allow-popups allow-same-origin">
@@ -297,6 +302,7 @@
   <amp-iframe src="https://vv-mod.vercel.app/"  width="1199" height="2599" scrolling="no" frameborder="0" sandbox="allow-scripts allow-popups allow-same-origin">
     <amp-img placeholder height="1" width="2" src="./img/IMG_1278.jpg" style="opacity:0.1"></amp-img>
   </amp-iframe>
+</div>
 </div>
 <!-- src="https://vii-mod.vercel.app/#ifr"  -->
 <!-- <iframe src="https://vv-mod.vercel.app" width="559" height="999" scrolling="no" frameborder="0" sandbox="allow-scripts allow-popups allow-same-origin">
